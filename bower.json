@@ -1,0 +1,32 @@
+{
+  "name": "ta",
+  "homepage": "https://github.com/stromaler/ta",
+  "authors": [
+    "= <=>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "amd",
+    "es6",
+    "yui"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "themify-icons": "^0.1.0",
+    "bootstrap": "^3.3.5",
+    "object-fit": "^0.4.2",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.1",
+    "font-awesome": "^4.5.0",
+    "jquery": "1.9"
+  }
+}
