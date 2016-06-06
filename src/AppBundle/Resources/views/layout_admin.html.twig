@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Shop</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% stylesheets
+    'bundles/app/vendor/bootstrap/dist/css/bootstrap.min.css'
+    'bundles/app/vendor/font-awesome/css/font-awesome.min.css'
+    'bundles/app/vendor/themify-icons/css/themify-icons.css'
+    filter='yui_css, cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen"/>
+    {% endstylesheets %}
+    {% block siteSheets %}
+    {% endblock %}
+    {% block scripts %}
+        {% javascripts
+        'bundles/app/vendor/jquery/jquery.min.js'
+        'bundles/app/vendor/bootstrap/dist/js/bootstrap.js'
+        filter='?yui_js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+
+        {% endjavascripts %}
+    {% endblock %}
+    {% block siteScripts %}
+    {% endblock %}
+</head>
+
+<body>
+<div class="main-content" id="main_content">
+    {% block content %}
+    {% endblock content %}
+</div>
+{% block footer_javascript %}
+
+{% endblock footer_javascript %}
+</body>
+</html>

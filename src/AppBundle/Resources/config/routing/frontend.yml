@@ -1,0 +1,19 @@
+homepage:
+  path: /
+  defaults: { _controller: AppBundle:Frontend:index }
+
+login:
+    path: /login
+    defaults: { _controller: AppBundle:admin/Security:login }
+
+login_check:
+    path: /login_check
+    defaults: { _controller: AppBundle:admin/Security:loginCheck }
+
+reset_password:
+    path: /zabudnute-heslo
+    defaults: { _controller: AppBundle:Security:resetPwd }
+
+reset_password_finish:
+    path: /reset-hesla/{token}
+    defaults: { _controller: AppBundle:Security:resetPwdFinish }

@@ -1,0 +1,32 @@
+{% extends '@App/layout_admin.html.twig' %}
+
+{% block content %}
+    {% if app.user %}
+        {% include '@App/backend/common/menu.html.twig' %}
+    {% else %}
+        <div class="container">
+        <div style="margin-top: 200px;" class="panel panel-default">
+            <div class="panel-heading">
+                Shop
+            </div>
+            <div class="panel-body">
+                <form action="{{ path('login_check') }}" method="post" class="right-side">
+                    <div class="form-group w100">
+                        <label for="username">E-Mail:</label>
+                        <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}"/>
+                    </div>
+                    <div class="form-group w100">
+                        <label for="password">Heslo:</label>
+                        <input class="form-control" type="password" id="password" name="_password"/>
+                    </div>
+                    <div class="form-group w100 ">
+                        <input type="hidden" name="_target_path" value="/admin"/>
+                        <button class="btn btn-success" type="submit">Prihlásiť</button>
+                        <a style="margin-left: 10px;" class="btn btn-info pull-right" href="{{ url('reset_password') }}">Zabudnuté heslo</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endif %}
+    </div>
+{% endblock %}
